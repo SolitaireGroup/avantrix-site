@@ -377,7 +377,7 @@ html {
     padding-bottom: 0;
     padding-left: 8vw;
     padding-right: 0;
-    background: url('/imgs/hero.jpg') center center/cover no-repeat;
+    background: url('imgs/hero.jpg') center center/cover no-repeat;
     overflow: hidden;
 }
 
