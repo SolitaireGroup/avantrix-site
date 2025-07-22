@@ -426,7 +426,7 @@ html {
     align-items: center;
     justify-content: flex-end;
     padding: 0 8vw;
-    background: url('imgs/hero.jpg') center center/cover no-repeat;
+    background: url('/imgs/hero.jpg') center center/cover no-repeat;
     overflow: hidden;
 }
 
