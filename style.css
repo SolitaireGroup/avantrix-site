@@ -32,20 +32,41 @@ body {
 
 /* Header */
 .header {
-    background-color: rgba(26, 26, 26, 0.35);
-    backdrop-filter: blur(28px);
+    background-color: var(--accent-blue);
+    /* removi o blur pra ficar sólido */
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     border-bottom: none;
-    left: 0;
-    right: 0;
     width: 100vw;
     margin: 0;
-    padding: 0;
+    padding: 0 20px; /* deixa um padding lateral pra espaçar */
+    display: flex;
+    align-items: center;
+    height: 60px; /* define altura do header */
 }
+
+/* Logo imagem */
+.logo img.logo-image {
+    height: 40px; /* altura da logo, ajuste se quiser */
+    width: auto;
+    display: block;
+}
+
+/* Ajuste links do nav para ficarem brancos */
+.nav-link {
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--bg-primary); /* muda pro fundo escuro no hover */
+}
+
 
 .header .container {
     display: flex;
