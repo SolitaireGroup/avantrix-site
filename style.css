@@ -436,8 +436,8 @@ html {
         padding: 100px 4vw 0 4vw;
     }
     .hero-texts {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
         padding: 12vw 0 8vw 0;
         padding-right: 0;
     }
@@ -445,6 +445,8 @@ html {
 
 @media (max-width: 480px) {
     .hero-texts {
+        align-items: center;
+        text-align: center;
         padding: 18vw 0 10vw 0;
     }
     .hero-title {
