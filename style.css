@@ -32,20 +32,19 @@ body {
 
 /* Header */
 .header {
-    background-color: var(--accent-blue);
-    /* removi o blur pra ficar sólido */
+    background-color: rgba(26, 26, 26, 0.35);
+    backdrop-filter: blur(28px);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     border-bottom: none;
+    left: 0;
+    right: 0;
     width: 100vw;
     margin: 0;
-    padding: 0 20px; /* deixa um padding lateral pra espaçar */
-    display: flex;
-    align-items: center;
-    height: 60px; /* define altura do header */
+    padding: 0;
 }
 
 /* Logo imagem */
