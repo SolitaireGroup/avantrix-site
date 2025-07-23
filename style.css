@@ -210,8 +210,11 @@ body {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(149, 233, 250);
+    background: #ffffff;
+    color: var(--bg-primary);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
+
 
 .whatsapp-button {
     display: inline-block;
