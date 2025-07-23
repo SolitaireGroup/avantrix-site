@@ -203,14 +203,14 @@ body {
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(2, 117, 139);
     margin: 0.5rem;
     font-size: 1rem;
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(149, 233, 250);
 }
 
 .whatsapp-button {
