@@ -170,4 +170,20 @@ s0.parentNode.insertBefore(s1,s0);
       });
     </script>
 </body>
+    <script>
+  const wrapper = document.querySelector('.team-slider-wrapper');
+  const prevBtn = document.querySelector('.team-nav.prev');
+  const nextBtn = document.querySelector('.team-nav.next');
+
+  const scrollAmount = 320;
+
+  prevBtn.addEventListener('click', () => {
+    wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+</script>
+
 </html>
