@@ -799,24 +799,30 @@ body {
 .team-slider {
   position: relative;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
+  max-width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+
+  /* Esconder scrollbar opcional */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.team-slider::-webkit-scrollbar {
+  display: none;
 }
 
 .team-slider-wrapper {
   display: flex;
+  gap: 2rem;
   transition: transform 0.4s ease;
   scroll-behavior: smooth;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  gap: 2rem;
-  padding-bottom: 10px;
+  width: max-content; /* Essencial pro scroll funcionar */
 }
 
 .team-member {
-  flex: 0 0 280px;
+  flex: 0 0 280px; /* Largura fixa de cada card */
   background-color: var(--bg-card);
   border-radius: 15px;
   padding: 2rem;
@@ -851,16 +857,6 @@ body {
   font-size: 0.9rem;
   line-height: 1.6;
 }
-
-/* Opcional: esconder barra de scroll no Chrome e Safari */
-.team-slider-wrapper::-webkit-scrollbar {
-  display: none;
-}
-.team-slider-wrapper {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
 
 /* CTA Section */
 .cta-section {
