@@ -793,96 +793,66 @@ body {
 /*nossa equipe carrossel*/
 .team-section {
   padding: 100px 0;
-  background-color: var(--bg-secondary);
+  background-color: #f0f0f0;
 }
 
 .team-slider {
   position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 10px;
-
-  /* Esconder scrollbar opcional */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.team-slider::-webkit-scrollbar {
-  display: none;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .team-slider-wrapper {
   display: flex;
-  gap: 2rem;
-  transition: transform 0.4s ease;
+  overflow-x: auto;
   scroll-behavior: smooth;
-  width: max-content; /* Essencial pro scroll funcionar */
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding: 1rem 0;
 }
 
 .team-member {
-  flex: 0 0 280px; /* Largura fixa de cada card */
-  background-color: var(--bg-card);
+  flex: 0 0 280px;
+  background-color: white;
   border-radius: 15px;
   padding: 2rem;
   text-align: center;
-  border: 1px solid var(--border-color);
+  border: 1px solid #ccc;
   scroll-snap-align: start;
-  user-select: none;
-}
-
-.member-photo {
-  width: 100px;
-  height: 100px;
-  background-color: var(--border-color);
-  border-radius: 50%;
-  margin: 0 auto 1rem;
-}
-
-.team-member h4 {
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.member-role {
-  color: var(--accent-blue);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.team-member p {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.6;
 }
 
 .team-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--bg-card);
-  color: var(--text-primary);
-  border: none;
-  font-size: 2rem;
-  padding: 0.3rem 0.8rem;
-  border-radius: 10px;
-  cursor: pointer;
   z-index: 10;
-  transition: background 0.3s;
-}
-.team-nav:hover {
-  background-color: var(--accent-blue);
-  color: white;
+  font-size: 2rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
 .team-nav.prev {
-  left: 10px;
+  left: -20px;
 }
+
 .team-nav.next {
-  right: 10px;
+  right: -20px;
 }
+
+.team-slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.team-slider-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 
 /* CTA Section */
 .cta-section {
