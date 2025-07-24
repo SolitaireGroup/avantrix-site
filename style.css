@@ -793,7 +793,7 @@ body {
 /*nossa equipe carrossel*/
 .team-section {
   padding: 100px 0;
-  background-color: #0a0a0a;
+  background-color: var(--bg-secondary);
 }
 
 .team-slider {
@@ -813,11 +813,11 @@ body {
 
 .team-member {
   flex: 0 0 280px;
-  background-color: white;
+  background-color: var(--bg-card);
   border-radius: 15px;
   padding: 2rem;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color;
   scroll-snap-align: start;
 }
 
@@ -828,7 +828,7 @@ body {
   z-index: 10;
   font-size: 2rem;
   background: #333;
-  color: #2a2a2a;
+  color: var(--accent-blue);
   border: none;
   border-radius: 50%;
   width: 40px;
