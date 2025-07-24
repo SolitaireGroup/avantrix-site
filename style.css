@@ -893,11 +893,7 @@ body {
 
 @media (max-width: 600px) {
   .team-nav {
-    width: 36px;
-    height: 36px;
-    font-size: 1.5rem;
-    left: 0;
-    right: 0;
+    display: none;
   }
   .team-nav.prev {
     left: 0;
