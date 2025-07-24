@@ -858,6 +858,32 @@ body {
   line-height: 1.6;
 }
 
+.team-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: none;
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+.team-nav:hover {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.team-nav.prev {
+  left: 10px;
+}
+.team-nav.next {
+  right: 10px;
+}
+
 /* CTA Section */
 .cta-section {
     padding: 100px 0;
