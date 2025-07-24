@@ -79,6 +79,20 @@ body {
     color: var(--text-primary);
 }
 
+.logo-img {
+  max-width: 170px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .logo-img {
+    max-width: 120px;
+  }
+}
+
 .nav-list {
     display: flex;
     list-style: none;
