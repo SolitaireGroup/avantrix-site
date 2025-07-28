@@ -40,7 +40,7 @@ s0.parentNode.insertBefore(s1,s0);
                 </ul>
             </nav>
         </div>
-    </header>
+    </header>m
 
     <main>
         <section class="page-hero">
@@ -95,63 +95,63 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
         </section>
 
- <section class="team-section">
+        <section class="team-section">
   <div class="container">
     <h2 class="section-title">Nossa Equipe</h2>
-    <div class="team-slider">
-      <button class="team-nav prev" aria-label="Anterior">‹</button>
-      <div class="team-slider-wrapper">
-        <div class="team-member">
-          <h4>Augusto César</h4>
-          <p class="member-role"><strong>CEO & Fundador</strong></p>
-          <p>Especialista em Marketing Digital e Google Meu Negócio.</p>
-        </div>
-        <div class="team-member">
-          <h4>Felipe Grando</h4>
-          <p class="member-role"><strong>Especialista em Tráfego Web</strong></p>
-          <p>Expert em otimização para mecanismos de busca e Google Meu Negócio.</p>
-        </div>
-        <div class="team-member">
-          <h4>Gabriel Mendes</h4>
-          <p class="member-role"><strong>Vendedor</strong></p>
-          <p>Responsável por apresentar nossos serviços de marketing digital para as empresas locais.</p>
-        </div>
-        <div class="team-member">
-          <h4>Isaias Rojas</h4>
-          <p class="member-role"><strong>Especialista em Vendas</strong></p>
-          <p>Responsável pelas vendas dos nossos produtos.</p>
-        </div>
-        <div class="team-member">
-          <h4>Douglas Lopes</h4>
-          <p class="member-role"><strong>Social Media</strong></p>
-          <p>Especialista em gestão de mídias sociais e engajamento digital.</p>
-        </div>
-        <div class="team-member">
-          <h4>Mateus Calmon</h4>
-          <p class="member-role"><strong>Especialista em Vendas</strong></p>
-          <p>Responsável pelas vendas dos nossos produtos.</p>
-        </div>
-        <div class="team-member">
-          <h4>Cauã Grando</h4>
-          <p class="member-role"><strong>Programador Web</strong></p>
-          <p>Programador dos Sites em HTML, CSS e JavaScript.</p>
-        </div>
-        <div class="team-member">
-          <h4>Luiz Libano</h4>
-          <p class="member-role"><strong>Web Designer</strong></p>
-          <p>Responsável por fazer o Design dos Sites.</p>
+    <div class="org-chart">
+      <!-- Direção -->
+      <div class="pillar">
+        <button class="pillar-title accordion-btn" type="button">Direção</button>
+        <div class="pillar-content">
+          <div class="team-member">
+            <h4>Augusto César</h4>
+            <p class="member-role"><strong>CEO & Fundador</strong></p>
+            <p>Especialista em Marketing Digital e Google Meu Negócio.</p>
+          </div>
         </div>
       </div>
-      <button class="team-nav next" aria-label="Próximo">›</button>
+      <!-- Especialistas -->
+      <div class="pillar">
+        <button class="pillar-title accordion-btn" type="button">Vendedores</button>
+        <div class="pillar-content">
+          <div class="team-member">
+            <h4>Felipe Grando</h4>
+          </div>
+          <div class="team-member">
+            <h4>Gabriel Mendes</h4>
+          </div>
+          <div class="team-member">
+            <h4>Isaias Rojas</h4>
+          </div>
+          <div class="team-member">
+            <h4>Mateus Calmon</h4>
+          </div>
+        </div>
+      </div>
+      <!-- Criação & Suporte -->
+      <div class="pillar">
+        <button class="pillar-title accordion-btn" type="button">Criação & Suporte</button>
+        <div class="pillar-content">
+          <div class="team-member">
+            <h4>Douglas Lopes</h4>
+            <p class="member-role"><strong>Social Media</strong></p>
+            <p>Especialista em gestão de mídias sociais e engajamento digital.</p>
+          </div>
+          <div class="team-member">
+            <h4>Cauã Grando</h4>
+            <p class="member-role"><strong>Programador Web</strong></p>
+            <p>Programador dos Sites em HTML, CSS e JavaScript.</p>
+          </div>
+          <div class="team-member">
+            <h4>Luiz Libano</h4>
+            <p class="member-role"><strong>Web Designer</strong></p>
+            <p>Responsável por fazer o Design dos Sites.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-
-
- 
-     
-
 
         <section class="cta-section">
             <div class="container">
@@ -168,21 +168,22 @@ s0.parentNode.insertBefore(s1,s0);
             <p>| avantrix.contato@gmail.com | </p>
         </div>
     </footer>
-</body>
     <script>
-  const wrapper = document.querySelector('.team-slider-wrapper');
-  const prevBtn = document.querySelector('.team-nav.prev');
-  const nextBtn = document.querySelector('.team-nav.next');
-  const scrollAmount = 320;
-
-  if (prevBtn && nextBtn && wrapper) {
-  prevBtn.addEventListener('click', () => {
-    wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+document.querySelectorAll('.accordion-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    // Fecha todos os outros
+    document.querySelectorAll('.accordion-btn').forEach(b => {
+      if (b !== btn) {
+        b.classList.remove('active');
+        b.nextElementSibling.classList.remove('open');
+      }
+    });
+    // Alterna o atual
+    btn.classList.toggle('active');
+    btn.nextElementSibling.classList.toggle('open');
   });
-  nextBtn.addEventListener('click', () => {
-    wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  });
-  }
+});
 </script>
+</body>
 
 </html>
